@@ -16,6 +16,7 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
+      text-align: center;
     }
     h1 {
       font-size: 3rem;
@@ -67,16 +68,28 @@
         opacity: 0;
       }
     }
+    .poem {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 1.3rem;
+      max-width: 600px;
+      line-height: 1.7;
+      color: #444;
+    }
   </style>
 </head>
 <body>
-  <h1>Happy Anniversary!</h1>
+  <h1>Happy Anniversary My Love</h1>
   <div id="timer"></div>
+
+  <!-- Background Music -->
   <audio autoplay loop>
     <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg" />
   </audio>
+
+  <!-- JS Timer -->
   <script>
-    const marriageDate = new Date("2013-05-19T00:00:00"); // 2070 Jestha 5 = 2013-05-19
+    const marriageDate = new Date("2013-05-19T00:00:00"); // 2070-02-05 BS
     const timerDiv = document.getElementById("timer");
 
     function updateTimer() {
@@ -90,8 +103,8 @@
       const seconds = Math.floor((diff / 1000) % 60);
 
       timerDiv.innerHTML = `
-        ${years} वर्ष ${days} दिन<br>
-        ${hours} घण्टा ${minutes} मिनेट ${seconds} सेकेन्ड
+        ${years} years ${days} days<br>
+        ${hours} hrs ${minutes} mins ${seconds} secs
       `;
     }
 
@@ -107,5 +120,25 @@
       setTimeout(() => heart.remove(), 6000);
     }, 800);
   </script>
+
+  <!-- Romantic Poem -->
+  <div class="poem">
+    <p>Through joy and tears, hand in hand,<br>
+    We walked together across life's land.</p>
+
+    <p>Since 2070, on that blessed day,<br>
+    You’ve been my light, my guide, my way.</p>
+
+    <p>Twelve sweet years have flown so fast,<br>
+    With love that grows, deep and vast.</p>
+
+    <p>You complete me in every part,<br>
+    You live forever in my heart.</p>
+
+    <p>So here’s to us, and years to come,<br>
+    With laughter, dreams, and a forever home.</p>
+
+    <p>– With all my love, Harendra</p>
+  </div>
 </body>
 </html>
